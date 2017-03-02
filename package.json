@@ -1,0 +1,14 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Test Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sid",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.1"
+  }
+}
