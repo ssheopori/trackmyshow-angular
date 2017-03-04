@@ -1,0 +1,28 @@
+<article class="search-result row" style="background: #fff; padding-bottom: 20px;">
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-8" style="padding-left: 20px;">
+        <a href="#" title="Lorem ipsum" class="thumbnail">
+            <img ng-src="http://thetvdb.com/banners/{{show.banner}}" alt="Lorem ipsum" />
+        </a>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-12 col-md-2" style="padding-top: 20px;">
+            <ul class="meta-search">
+                <li><i class="glyphicon glyphicon-calendar"></i><span><b>First Aired:</b> {{show.firstAired}}</span></li>
+                <li><i class="glyphicon glyphicon-film"></i><span><b>Current Network:</b> {{show.network}}</span></li>            
+                <li><i class="glyphicon glyphicon-bullhorn"></i><span><b>Current Status:</b> {{show.status}}</span></li>
+            </ul>
+        </div>
+    </div>    
+    <div class="col-xs-12 col-sm-12 col-md-10 excerpet">
+        <h3><a href="#" title="">{{show.seriesName}}</a></h3>
+        <p>{{show.overview}}</p>						
+        <hr>
+        <span class="plus"><a href="" ng-click="home.addFav(show)" title="Add as Favourite"><i class="glyphicon glyphicon-heart"></i></a></span>
+        <span class="plus"><a href="#" title="Add to Watch List"><i class="glyphicon glyphicon-film"></i></a></span>
+    </div>
+    <span class="clearfix borda"></span>
+    
+</article>

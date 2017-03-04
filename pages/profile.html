@@ -1,0 +1,42 @@
+<navbar-directive></navbar-directive>
+
+<div class="container" style="text-align: center;">
+
+    <img src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" style="height: 150px; width: 150px;"  alt=""> 
+    <p style="color: #fff; font-size: 1.3em;">{{profile.profile.email}}</p>
+
+</div>
+
+
+<div class="container">
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Fav. Shows</h3>
+    </div>
+    <div class="panel-body">
+
+
+            <div class="row" ng-repeat="show in profile.profile.fav" >
+
+                <div class="col-xs-12 col-sm-12 col-md-6" style="text-align: center;" >
+                <a href="#" title="Lorem ipsum" class="thumbnail">
+                    <img ng-src="http://thetvdb.com/banners/{{show.banner}}" alt="Lorem ipsum" />
+                </a>
+                </div>
+            </div> 
+
+        
+    </div>
+    </div>
+
+    <div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">Watch List</h3>
+    </div>
+    <div class="panel-body">
+        None added!        
+    </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,23 @@
+
+
+<navbar-directive></navbar-directive>
+
+<div class="container" style="padding-top: 100px;">
+
+  <div class="form-group">  
+    <div class="input-group">    
+      <input class="form-control" type="text" placeholder="Search TV Show..." ng-model="searchString">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" ng-click="home.search(searchString)">Search</button>
+      </span>
+    </div>
+  </div>
+
+  <div>        
+      <section class="col-xs-12 col-sm-6 col-md-12">
+          <search-result ng-repeat="show in home.searchResults.data"></search-result>     
+      </section>  
+  </div>
+
+</div>
+

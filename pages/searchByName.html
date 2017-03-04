@@ -1,0 +1,15 @@
+    <div class="container" ng-controller="mainCtrl">
+        <form>
+            <div class="input-group">
+                <input type="text" ng-model="searchString" placeholder="Search TV Show..." class="form-control" aria-label="...">
+                <div class="input-group-btn">
+                <button type="submit" ng-click="search(searchString)" class="btn btn-default" aria-haspopup="true" aria-expanded="false">
+                    Search</button>
+                </div>
+            </div>    
+        </form>
+        <hr>          
+        <section class="col-xs-12 col-sm-6 col-md-12">
+            <search-result ng-repeat="show in searchResults.data"></search-result>     
+        </section>  
+    </div>
