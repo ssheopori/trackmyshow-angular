@@ -1,0 +1,80 @@
+<navbar-directive></navbar-directive>
+
+<div class="container" style="text-align: center;">
+    <img src="./img/angular.png"  class="img-circle" style="height: 150px; width: 150px;"  alt="">     
+    <img src="./img/bootstrap.png"  class="img-circle" style="height: 150px; width: 150px;"  alt=""> 
+    <img src="./img/auth.png"  class="img-circle" style="height: 150px; width: 150px;background: white;"  alt="">     
+</div>
+
+
+<div style="margin-top: 40px; height: 100%; background: #E8E8E8; opacity: 0.95;">   
+
+    <div id="headerBar" style="height: 40px; background: #333;">
+    </div>
+
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Documentation</h3>
+        </div>
+        <div class="panel-body">
+
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" style="height: 64px; width: 64px;" src="./img/angular.png">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">AngularJS Web Application</h4>
+        <ul>
+            <li>The NavBar is a directive with its own Controller</li>
+            <li>The Search Result grid is also a directive. However it does not have its own Controller</li>            
+            <li>User Authentication is carried out via the Auth0 service. It is free for 7000 users per month!</li>            
+            <li><a href="https://github.com/ssheopori/trackmyshow-angular" style="color: black;">Source Code on GitHub</a></li>            
+        </ul>
+  </div>
+</div>
+
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" style="height: 64px; width: 64px;" src="./img/nodejs.png">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">NodeJS Web Server</h4>
+        <ul>
+            <li>NodeJS is running using Express to receive Client Requets</li>
+            <li>Data for TV Shows is searched on TVDB using their JSON API</li>            
+            <li>TVDB uses JSON Token to authenticate the Server. Token is valid for 24hrs</li>            
+            <li>If you do pull the source from GitHub, you will need to create two files under the modules folder:
+                <ul>
+                    <li>secrets.json : This is the api key for TVDB. You have to get your own API Key and account. The format is:<br>
+                        {<br>                                    
+    "apikey"    :"",<br> 
+    "username"  :"",<br>        
+    "userkey"   :""<br> 
+}<br>  
+                    </li>
+                    <li>token.json : The token from TVDB is currently saved in this file. The format is:<br>
+                        {<br>
+                            "expireTime":"",<br>
+                            "token":""<br>
+                        }<br>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="https://github.com/ssheopori/tvdbapi-nodejs" style="color: black;">Source Code on GitHub</a></li>            
+        </ul>
+  </div>
+</div>
+
+            
+        </div>
+    </div>
+</div>
+    
+</div>

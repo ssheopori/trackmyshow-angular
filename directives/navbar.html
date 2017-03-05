@@ -12,14 +12,13 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="" ui-sref="profile">Profile <span class="badge">{{home.user.fav.length}}</span></a></li>
-        <li><a href="#">Watch List</a></li>                        
+        <li><a href="" ui-sref="profile">Profile <span class="badge">{{toolbar.user.fav.length}}</span></a></li>        
       </ul>      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="" ui-sref="cover" >Docs</a></li>
-        <li ng-if="!home.auth.isAuthenticated"><a href="" ng-click="home.login()">Login</a></li>
-        <li ng-if="home.auth.isAuthenticated"><a href="" ng-click="home.logout()">Logout</a></li>
-        <li ng-if="home.auth.isAuthenticated"><img ng-src="{{home.avatar}}" class="img-rounded" style="width: 60px; height: 60px;padding: 5px;" alt=""></li>
+        <li><a href="" ui-sref="docs" >Docs</a></li>
+        <li ng-if="!toolbar.auth.isAuthenticated"><a href="" ng-click="toolbar.login()">Login</a></li>
+        <li ng-if="toolbar.auth.isAuthenticated"><a href="" ng-click="toolbar.logout()">Logout</a></li>
+        <li ng-if="toolbar.auth.isAuthenticated"><img ng-src="{{toolbar.user.avatar}}" style="width: 60px; height: 60px;padding: 5px;" alt=""></li>
       </ul>
     </div>
   </div>
