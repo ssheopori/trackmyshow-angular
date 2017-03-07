@@ -36,6 +36,12 @@
 .search-result span.plus a i { color: #fff !important; }
 .search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
 
+.poster{
+  padding-right: 10px;
+}
+.poster :hover{
+  background-color: #414131; 
+}
 
 
 

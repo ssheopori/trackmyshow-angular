@@ -12,10 +12,27 @@
     </div>
 
     <div class="container" style="opacity: 1;" >
+        <div class="row">
+            <div ng-repeat="show in profile.profile.fav"            
+                class="col-xs-6 col-sm-4 col-md-3 col-lg-2 thumb">
+                <span class="thumbnail animated fadeInUp"  style="border: none;background: #fff;">
+                    <a>
+                        <img ng-src="http://thetvdb.com/banners/{{show.poster}}" class="img-thumbnail" style="max-height: 350px;" >
+                    </a>
+                    <div style="height: 35px; background: #333;opacity: 1.0;text-align: right;padding-right: 10px;padding-top: 5px;">                        
+                        <a href="" title="{{show.pgrating}}" class="poster" >{{show.pgrating}}</a>
+                        <a href="" title="Next Airs on {{show.airsDayOfWeek}} at {{show.airsTime}}" class="poster" ><i class="fa fa-television fa-2x" style="color: dodgerblue"></i></a>
+                        <a href="" title="Show Rating {{show.rating}}" class="poster" ><i class="fa fa-heart fa-2x" style="color: red;"></i></a>
+                    </div>     
+                </span>
+            </div>
+        </div>
+
+<!--
         <div class="row" ng-repeat="show in profile.profile.fav" >
                 <div  style="text-align: center;" >
                 <a class="thumbnail" >
-                    <img ng-src="http://thetvdb.com/banners/{{show.banner}}" alt="Lorem ipsum" />
+                    <img ng-src="http://thetvdb.com/banners/{{show.poster}}" alt="Lorem ipsum" />
                     <p style="color: #333;font-size: 1.5em; padding-top: 10px;">
                         <i class="glyphicon glyphicon-film"></i><span><b> Watch it on: </b> {{show.network}}</span>                        
                     </p>
@@ -25,6 +42,9 @@
                 </div>
         </div> 
     </div>
+-->
+
+
 </div>
 
 
