@@ -16,68 +16,43 @@
             <div ng-repeat="show in profile.profile.fav"            
                 class="col-xs-6 col-sm-4 col-md-3 col-lg-2 thumb">
                 <span class="thumbnail animated fadeInUp"  style="border: none;background: #fff;">
-                    <a>
+                    <a href="" ng-click="profile.viewShowDetails(show)">
                         <img ng-src="http://thetvdb.com/banners/{{show.poster}}" class="img-thumbnail" style="max-height: 350px;" >
                     </a>
-                    <div style="height: 35px; background: #333;opacity: 1.0;text-align: right;padding-right: 10px;padding-top: 5px;">                        
-                        <a href="" title="{{show.pgrating}}" class="poster" >{{show.pgrating}}</a>
-                        <a href="" title="Next Airs on {{show.airsDayOfWeek}} at {{show.airsTime}}" class="poster" ><i class="fa fa-television fa-2x" style="color: dodgerblue"></i></a>
-                        <a href="" title="Show Rating {{show.rating}}" class="poster" ><i class="fa fa-heart fa-2x" style="color: red;"></i></a>
+                    <div class="row" style="height: 35px; background: #333;opacity: 1.0;text-align: right;padding-right: 10px;padding-top: 5px;">                        
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
+                           <a title="{{show.pgrating}}" class="poster" >{{show.pgrating}}</a>                           
+                        </div>                
+
+                        <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6">
+                            <a title="Show Rating {{show.rating}}" class="poster" ><i class="fa fa-heart" style=" color: indianred" ></i><span style="font-size: .93em;"> {{show.rating}}</span></a>
+                        </div>                        
                     </div>     
-                </span>
+                </span> 
             </div>
         </div>
 
-<!--
-        <div class="row" ng-repeat="show in profile.profile.fav" >
-                <div  style="text-align: center;" >
-                <a class="thumbnail" >
-                    <img ng-src="http://thetvdb.com/banners/{{show.poster}}" alt="Lorem ipsum" />
-                    <p style="color: #333;font-size: 1.5em; padding-top: 10px;">
-                        <i class="glyphicon glyphicon-film"></i><span><b> Watch it on: </b> {{show.network}}</span>                        
-                    </p>
-                    
-                </a>               
-                
+        <div class="row" style="opacity: 1; background: #fff;" ng-if="profile.showDetails">
+
+            <div class="row">
+                <div class="col-md-4" id="showDetail_Poster" style="text-align: center;margin-top: 9px;margin-bottom: 9px;">
+                    <img ng-src="http://thetvdb.com/banners/{{profile.showDetails.poster}}" class="img-thumbnail" style="max-height: 350px;" >
                 </div>
-        </div> 
-    </div>
--->
-
-
-</div>
-
-
-<!--
-<div style="text-align: center;">
-    <div class="panel panel-default">
-    <div class="panel-heading">
-        <h3 class="panel-title">Fav. Shows</h3>
-    </div>
-    <div class="panel-body">
-
-
-            <div class="row" ng-repeat="show in profile.profile.fav" >
-
-                <div class="col-xs-12 col-sm-12 col-md-6" style="text-align: center;" >
-                <a href="#" title="Lorem ipsum" class="thumbnail">
-                    <img ng-src="http://thetvdb.com/banners/{{show.banner}}" alt="Lorem ipsum" />
-                </a>
+                <div class="col-md-8" id="showDetail_Details">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span style="font-size: 1.9em;">{{profile.showDetails.seriesName}} </span><span>({{profile.showDetails.status}})</span>  <a href="" title="Remove '{{profile.showDetails.seriesName}}' from collection" ng-click="profile.removeFromCollection(profile.showDetails)"><span style="color: red;"><i class="fa fa-heart"></i></span> </a>         
+                             <div>First Aired on: {{profile.showDetails.firstAired}}</div>
+                             <div>Network: {{profile.showDetails.network}}</div>
+                             <div ng-if="profile.showDetails.airsDayOfWeek">Next Airs on: {{profile.showDetails.airsDayOfWeek}} at {{profile.showDetails.airsTime}}</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 excerpet" id="showDetails_Overview" style="margin-top: 20px;">
+                            {{profile.showDetails.overview}}
+                        </div>
+                    </div>
                 </div>
-            </div> 
-
-        
-    </div>
-    </div>
-
-    <div class="panel panel-success">
-    <div class="panel-heading">
-        <h3 class="panel-title">Watch List</h3>
-    </div>
-    <div class="panel-body">
-        None added!        
-    </div>
-    </div>
-
+            </div>    
+        </div>
 </div>
--->
