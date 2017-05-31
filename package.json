@@ -9,6 +9,9 @@
   "author": "Sid",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.1"
+    "cors": "^2.8.1",
+    "eslint": "^3.19.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1"
   }
 }
