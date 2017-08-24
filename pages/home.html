@@ -3,22 +3,34 @@
 
 <div class="container" style="padding-top: 100px;">
 
-<form>
-  <div class="form-group">  
-    <div class="input-group">    
-      <input class="form-control" type="text" placeholder="Search TV Show..." ng-model="searchString">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit" ng-click="home.search(searchString)">Search</button>
-      </span>
+  <form>
+    <div class="form-group">  
+      <div class="input-group">    
+        <input class="form-control" type="text" placeholder="Search TV Show..." ng-model="searchString">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit" ng-click="home.search(searchString)">Search</button>
+        </span>
+      </div>
     </div>
-  </div>
-</form>
+  </form>
 
-  <div>        
-      <section class="col-xs-12 col-sm-6 col-md-12">
-          <search-result ng-repeat="show in home.searchResults.data"></search-result>     
-      </section>  
+    <div>        
+        <section class="col-xs-12 col-sm-6 col-md-12">
+            <search-result ng-repeat="show in home.searchResults.data"></search-result>     
+        </section>  
+    </div>
+
+      <div class="row" style="background: #F5F5F5; margin: 20px;">
+        <div class="col-sm-12">        
+          <now-playing></now-playing>                
+        </div>        
+      </div>
+    
   </div>
 
-</div>
+  
+
+
+
+
 
